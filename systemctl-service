@@ -1,0 +1,19 @@
+# copy to /etc/systemd/system/scan-web-server.service
+# dont forget to exec:
+# systemctl enable scan-web-server.service
+# systemctl start scan-web-server.service
+
+[Unit]
+Description=Scan web server
+After=network.target
+
+[Service]
+User=mfp
+Group=mfp
+ExecStart=/usr/bin/python3 /home/mfp/scan-web/app.py
+WorkingDirectory=/home/mfp/scan-web/
+Restart=on-failure
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,109 @@
+
+
+
+body {
+  font-family:  Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: normal;
+  background: #f8f9fd;
+  color: gray;
+}
+
+.header{
+  margin-bottom: 1.0em;
+}
+
+.files {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  color: #212529;
+  width: 100%;
+}
+
+.file {
+  margin-bottom: 1.0em;
+  -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  background: #fff;
+  border: none;
+}
+.file:hover {
+    background-color: #cecece61;
+}
+
+.file div {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.5em 0.5em 0em 0.5em;
+}
+.file div:first-child {
+  padding: 0px;
+}
+.file div:nth-child(2) {
+  padding: 0.5em 0.5em 0em 0.5em;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .4em .7em;
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px #0000002e inset;
+  transition: 0.2s;
+  margin-bottom: 0.3em;
+
+  /* .noselect */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.btn:hover { background: rgb(53, 167, 110); }
+
+
+.btn.orange {
+  color: #fff;
+  border-color: #FDBE33 #000 #D77206;
+  background: linear-gradient(#F3AE0F, #E38916) #E38916;
+}
+.btn.orange:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
+
+.btn.red {
+  color: #fff;
+  background: rgb(212,75,56);
+}
+.btn.red:hover { background: rgb(232,95,76); }
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.status {
+  background-color: #f7d68b;
+  padding: 10px;
+  margin-bottom: 0.4em;
+  color: #480606;
+}
+
+@media screen and (max-width: 600px){
+  .file div {
+     display: block;
+  }
+  .file div:last-child {
+      padding-bottom: 0.5em;
+  }
+}
