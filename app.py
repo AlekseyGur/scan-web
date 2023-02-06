@@ -31,7 +31,7 @@ if os.path.exists(dir_app):
     rec = ''
     rec += "# Этот файл перезаписывается автоматически при старте веб сервера\n"
     # rec += f'file_name="{dir_scan}/$(date +%Y-%m-%d_%H:%M:%S).jpg"' + "\n" # У сервера нет батарейки - время не спасается!
-    rec += f'file_name="{dir_scan}/$(( $(find /home/mfp/scan-web/static/scan/ -name "*.jpg" | wc -l) + 1 )).jpg"' + "\n" # имя файла = кол-во сохранённых сканов jpg в папке + 1
+    rec += f'file_name="{dir_scan}/$(( $(find {dir_scan}/ -name "*.jpg" | wc -l) + 1 )).jpg"' + "\n" # имя файла = кол-во сохранённых сканов jpg в папке + 1
     rec += '''device="$(hp-info -i 2>/dev/null | grep 'scan-uri' | awk '{print $NF}')"''' + "\n"
     rec += f'echo "1" > "{file_is_scan}"'
     rec += ' && '
