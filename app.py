@@ -35,7 +35,7 @@ if os.path.exists(dir_app):
     rec += '''device="$(hp-info -i 2>/dev/null | grep 'scan-uri' | awk '{print $NF}')"''' + "\n"
     rec += f'echo "1" > "{file_is_scan}"'
     rec += ' && '
-    rec += 'hp-scan -i -d ${device} --output=${file_name} --res=300 --compression=jpg > /dev/null 2>&1'
+    rec += 'hp-scan -i -d ${device} --output=${file_name} --mode=color --res=300 --compression=jpg > /dev/null 2>&1'
     rec += ' && '
     rec += f'rm "{file_is_scan}" ' + "\n"
     with open(file_do_scan, 'w') as f:
