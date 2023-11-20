@@ -110,27 +110,29 @@ body {
 
 
 @media (prefers-color-scheme: dark) {
-	.file , 
+  .file , 
   body{
-		background: #0f0f0f;
-		background: #222;
-		background: #0f1116;
-		color: #e3e3e3;
-	}
+    background: #0f0f0f;
+    background: #222;
+    background: #0f1116;
+    color: #e3e3e3;
+  }
   .btn {
     color: #060606; 
     background: rgb(153, 219, 185);
   }
   .btn.orange{
+    color: #060606; 
   }
   .btn.red{
+    color: #060606; 
     background: rgb(219, 135, 124);
   }
   .file {
-		background: #222;
-		color: #e3e3e3;
+    background: #222;
+    color: #e3e3e3;
   }
   a {
-		color: #a18efd;
+    color: #a18efd;
   }
 }
